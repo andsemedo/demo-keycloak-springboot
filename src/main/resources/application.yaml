@@ -1,0 +1,19 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/keycloakintegrationdemo
+          jwk-set-uri: http://localhost:9090/realms/keycloakintegrationdemo/protocol/openid-connect/certs
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+jwt:
+  auth:
+    converter:
+      resource-id: demo
+      principle-attribute: preferred_username # Specifies a specific attribute name in the JWT's header where principals (users) are indicated.SecurityConfig class
