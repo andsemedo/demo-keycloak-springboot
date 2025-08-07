@@ -15,5 +15,5 @@ logging:
 jwt:
   auth:
     converter:
-      resource-id: demo
+      resource-ids: demo,demoreal2
       principle-attribute: preferred_username # Specifies a specific attribute name in the JWT's header where principals (users) are indicated.SecurityConfig class
